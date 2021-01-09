@@ -10,9 +10,9 @@ git remote add upstream https://github.com/alhaol/ds-projects.git
 ```sh
 git fetch upstream
 ```
-**Make sure that you're on your master branch:**
+**Make sure that you're on your master branch (master or main > Check your branches names):**
 ```sh
-git checkout master
+git checkout main
 ```
 
 **Rewrite your master branch so that any commits of yours that aren't already in upstream/master are replayed on top of that other branch:**
@@ -20,3 +20,8 @@ git checkout master
 git rebase upstream/master
 ```
 
+**If you've rebased your branch onto upstream/master you may need to force the push in order to push it to your own forked repository on GitHub. You'd do that with:**
+
+```sh
+git push -f origin
+```
